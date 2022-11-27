@@ -24,8 +24,10 @@ val fontSizesTitle: TextUnit = 24.sp
 val fontSizesTitleExtra: TextUnit = 32.sp
 
 val avatarSmall: Dp = 50.dp
+val imageBorderSmall: Dp = 2.dp
 
 val iconSmall: Dp = 24.dp
 val iconMedium: Dp = 32.dp
 
 val cardRounded: Dp = 25.dp
+

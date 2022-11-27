@@ -3,10 +3,12 @@ package com.example.worldcup2022.ui.screen.home
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -20,9 +22,11 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.worldcup2022.R
 import com.example.worldcup2022.ui.screen.home.composable.CardInfo
+import com.example.worldcup2022.ui.screen.home.composable.CardMatch
 import com.example.worldcup2022.ui.screen.home.composable.TitleWithSeeAll
 import com.example.worldcup2022.ui.screen.home.uistate.HomeUiState
 import com.example.worldcup2022.ui.theme.spacingExtraLarge
+import com.example.worldcup2022.ui.theme.spacingLarge
 import com.example.worldcup2022.ui.theme.spacingMedium
 import com.example.worldcup2022.ui.theme.spacingSmall
 
@@ -79,6 +83,20 @@ private fun HomeScreenContent(
             R.string.all_matches,
             seeAll = {}
         )
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight(),
+            verticalArrangement = Arrangement.spacedBy(
+                spacingLarge,
+
+                ),
+        ) {
+            items(state.matchesInfo.size) {
+                CardMatch(state.matchesInfo[it])
+            }
+        }
+
     }
 }
 //

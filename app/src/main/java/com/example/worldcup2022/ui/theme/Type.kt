@@ -35,6 +35,10 @@ var primaryBoldTextStyle: TextStyle = primaryTextStyle.copy(
     fontWeight = FontWeight.SemiBold,
 )
 
+var primaryBoldTextStylePrimaryColor: TextStyle = primaryBoldTextStyle.copy(
+    color = LightColorScheme.primary
+)
+
 var secondaryTextStyle: TextStyle = fontDefault.copy(
     fontWeight = FontWeight.Normal,
     fontSize = fontSizesSecondary,
@@ -43,4 +47,8 @@ var secondaryTextStyle: TextStyle = fontDefault.copy(
 var secondaryBoldTextStyle: TextStyle = secondaryTextStyle.copy(
     fontWeight = FontWeight.Bold,
     fontSize = fontSizesSecondary,
+)
+
+var secondaryBoldTextStylePrimaryColor: TextStyle = secondaryBoldTextStyle.copy(
+    color = LightColorScheme.primary
 )

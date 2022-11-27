@@ -14,6 +14,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -35,6 +36,7 @@ import com.example.worldcup2022.ui.theme.spacingSmall
 @Composable
 fun AppBar() {
     TopAppBar(
+
         modifier = Modifier.padding(horizontal = spacingMedium, vertical = spacingSmall),
         title = {
             Column(
@@ -73,7 +75,8 @@ fun AppBar() {
                     tint = LightColorScheme.primary
                 )
             }
-        }
+        },
+        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(LightColorScheme.background)
 
     )
 }

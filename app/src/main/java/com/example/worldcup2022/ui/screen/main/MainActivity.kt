@@ -4,14 +4,13 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.worldcup2022.ui.screen.home.HomeScreen
-
 import com.example.worldcup2022.ui.screen.main.composable.AppBar
+import com.example.worldcup2022.ui.theme.LightColorScheme
 import com.example.worldcup2022.ui.theme.WorldCup2022Theme
 
 class MainActivity : ComponentActivity() {
@@ -36,6 +35,7 @@ fun Main() {
 @Composable
 fun MainContent() {
     Scaffold(
+        containerColor = LightColorScheme.background,
         topBar = {
             AppBar()
 
