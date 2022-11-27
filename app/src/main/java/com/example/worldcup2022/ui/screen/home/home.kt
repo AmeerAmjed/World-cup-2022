@@ -1,6 +1,7 @@
 package com.example.worldcup2022.ui.screen.home
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -24,7 +25,6 @@ import com.example.worldcup2022.ui.screen.home.composable.CardInfo
 import com.example.worldcup2022.ui.screen.home.composable.CardMatch
 import com.example.worldcup2022.ui.screen.home.composable.TitleWithSeeAll
 import com.example.worldcup2022.ui.screen.home.uistate.HomeUiState
-import com.example.worldcup2022.ui.theme.spacingLarge
 import com.example.worldcup2022.ui.theme.spacingMedium
 import com.example.worldcup2022.ui.theme.spacingSmall
 
@@ -63,11 +63,12 @@ private fun HomeScreenContent(
 
         LazyRow(
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = spacingMedium),
+                .fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(
-                spacingLarge,
+                spacingMedium,
             ),
+            contentPadding = PaddingValues(horizontal = spacingMedium),
+
             state = stateScrollCard
         ) {
             items(state.genericInfo.size) {
@@ -87,7 +88,7 @@ private fun HomeScreenContent(
                 .padding(horizontal = spacingMedium),
 
             verticalArrangement = Arrangement.spacedBy(
-                spacingLarge,
+                spacingMedium,
 
                 ),
         ) {

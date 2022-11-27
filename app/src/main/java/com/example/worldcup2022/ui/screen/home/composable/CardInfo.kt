@@ -31,9 +31,9 @@ import com.example.worldcup2022.ui.theme.LightColorScheme
 import com.example.worldcup2022.ui.theme.cardRounded
 import com.example.worldcup2022.ui.theme.fontSizesSmall
 import com.example.worldcup2022.ui.theme.labelSmallTextStyle
-import com.example.worldcup2022.ui.theme.primaryTextStyle
+import com.example.worldcup2022.ui.theme.primaryBoldTextStyle
 import com.example.worldcup2022.ui.theme.spacing
-import com.example.worldcup2022.ui.theme.spacingLarge
+import com.example.worldcup2022.ui.theme.spacingMedium
 import com.example.worldcup2022.ui.theme.spacingSmall
 import com.example.worldcup2022.ui.theme.zero
 
@@ -41,9 +41,11 @@ import com.example.worldcup2022.ui.theme.zero
 fun CardInfo(genericInfo: GenericInfoUiState, IsFirstVisibleItem: Boolean) {
     Card(
         modifier = Modifier
-            .width(300.dp)
-            .height(200.dp)
-            .padding(vertical = if (IsFirstVisibleItem) zero else spacingLarge),
+            .width(310.dp)
+            .height(170.dp)
+            .padding(
+                vertical = if (IsFirstVisibleItem) zero else spacingMedium,
+            ),
         shape = RoundedCornerShape(cardRounded),
         colors = CardDefaults.cardColors(
             containerColor = if (IsFirstVisibleItem) LightColorScheme.primary else LightColorScheme.secondary,
@@ -62,12 +64,12 @@ fun CardInfo(genericInfo: GenericInfoUiState, IsFirstVisibleItem: Boolean) {
             )
             Column(
                 modifier = Modifier
-                    .padding(spacingSmall)
+                    .padding(vertical = spacingMedium, horizontal = spacingSmall)
                     .fillMaxHeight()
             ) {
                 Text(
                     genericInfo.title,
-                    style = primaryTextStyle.copy(
+                    style = primaryBoldTextStyle.copy(
                         color = Color.White,
                     ),
                     maxLines = 1,
@@ -80,7 +82,8 @@ fun CardInfo(genericInfo: GenericInfoUiState, IsFirstVisibleItem: Boolean) {
                         fontSize = fontSizesSmall,
                         color = Color.White,
                     ),
-                    maxLines = 8,
+                    maxLines = if (IsFirstVisibleItem) 5 else 3,
+                    modifier = Modifier.padding(end = spacingSmall),
                     overflow = TextOverflow.Ellipsis
                 )
                 Box(
