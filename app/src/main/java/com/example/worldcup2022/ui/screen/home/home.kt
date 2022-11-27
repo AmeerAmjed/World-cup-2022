@@ -1,5 +1,4 @@
 package com.example.worldcup2022.ui.screen.home
-
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -80,6 +79,7 @@ private fun HomeScreenContent(
             R.string.all_matches,
             seeAll = {}
         )
+
         LazyColumn(
             modifier = Modifier
                 .fillMaxWidth()
@@ -98,10 +98,5 @@ private fun HomeScreenContent(
 
     }
 }
-//
-//@Preview()
-//@Composable
-//private fun HomeScreenPreview() {
-//    HomeScreenContent()
-//}
+
 
