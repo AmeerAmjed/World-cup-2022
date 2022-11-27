@@ -25,7 +25,6 @@ import com.example.worldcup2022.ui.screen.home.composable.CardInfo
 import com.example.worldcup2022.ui.screen.home.composable.CardMatch
 import com.example.worldcup2022.ui.screen.home.composable.TitleWithSeeAll
 import com.example.worldcup2022.ui.screen.home.uistate.HomeUiState
-import com.example.worldcup2022.ui.theme.spacingExtraLarge
 import com.example.worldcup2022.ui.theme.spacingLarge
 import com.example.worldcup2022.ui.theme.spacingMedium
 import com.example.worldcup2022.ui.theme.spacingSmall
@@ -54,7 +53,7 @@ private fun HomeScreenContent(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(horizontal = spacingMedium, vertical = spacingSmall)
+            .padding(vertical = spacingSmall)
     ) {
 
         Spacer(modifier = Modifier.height(72.dp))
@@ -65,14 +64,12 @@ private fun HomeScreenContent(
 
         LazyRow(
             modifier = Modifier
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .padding(start = spacingMedium),
             horizontalArrangement = Arrangement.spacedBy(
-                spacingExtraLarge,
-
-                ),
+                spacingLarge,
+            ),
             state = stateScrollCard
-
-
         ) {
             items(state.genericInfo.size) {
                 CardInfo(state.genericInfo[it], it == firstVisibleItemIndexCard)
@@ -86,7 +83,9 @@ private fun HomeScreenContent(
         LazyColumn(
             modifier = Modifier
                 .fillMaxWidth()
-                .fillMaxHeight(),
+                .fillMaxHeight()
+                .padding(horizontal = spacingMedium),
+
             verticalArrangement = Arrangement.spacedBy(
                 spacingLarge,
 

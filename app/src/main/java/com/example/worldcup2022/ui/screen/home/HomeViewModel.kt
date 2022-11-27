@@ -25,19 +25,19 @@ class HomeViewModel : ViewModel() {
             it.copy(
                 genericInfo = listOf(
                     GenericInfoUiState(
-                        title = "ameer",
-                        description = "hi",
-                        imageUrl = "https://avatars.githubusercontent.com/u/45900975?v=4"
+                        title = "2022 FIFA World Cup",
+                        description = "The 2022 FIFA World Cup is an international association football tournament contested by the men's national teams of FIFA's member associations. The 22nd FIFA World Cup, it is taking place in Qatar from 20 November to 18 December 2022. This is the first World Cup to be held in the Arab world, and the second held entirely in Asia after the 2002 tournament in South Korea and Japan.[A] At an estimated cost of over \$220 billion, it is the most expensive World Cup ever held",
+                        imageUrl = "https://digitalhub.fifa.com/transform/cc484be3-24c2-4315-a331-71f252d70349/Brand_Protection_fwc2022_oe_4ct_3D_ps_l"
                     ),
                     GenericInfoUiState(
-                        title = "ameer",
-                        description = "hi",
-                        imageUrl = "https://avatars.githubusercontent.com/u/45900975?v=4"
+                        title = "Thiago Silva: I knew people doubted me",
+                        description = "Brazil captain tells FIFA+ about his burning World Cup aim and remaining at peak of profession for two decades.",
+                        imageUrl = "https://cloudinary.fifa.com/m/4d96512a41e31e58/original/Brazil-Training-Session-FIFA-World-Cup-Qatar-2022.jpg"
                     ),
                     GenericInfoUiState(
-                        title = "ameer",
-                        description = "hi",
-                        imageUrl = "https://avatars.githubusercontent.com/u/45900975?v=4"
+                        title = "Thiago Silva: I knew people doubted me",
+                        description = "Brazil captain tells FIFA+ about his burning World Cup aim and remaining at peak of profession for two decades.",
+                        imageUrl = "https://cloudinary.fifa.com/m/4d96512a41e31e58/original/Brazil-Training-Session-FIFA-World-Cup-Qatar-2022.jpg"
                     ),
                 )
             )

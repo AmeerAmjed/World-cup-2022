@@ -14,7 +14,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -47,7 +46,7 @@ fun CardInfo(genericInfo: GenericInfoUiState, IsFirstVisibleItem: Boolean) {
             .padding(vertical = if (IsFirstVisibleItem) zero else spacingLarge),
         shape = RoundedCornerShape(cardRounded),
         colors = CardDefaults.cardColors(
-            containerColor = if (IsFirstVisibleItem) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.secondary,
+            containerColor = if (IsFirstVisibleItem) LightColorScheme.primary else LightColorScheme.secondary,
         )
     ) {
         Row() {
@@ -66,7 +65,15 @@ fun CardInfo(genericInfo: GenericInfoUiState, IsFirstVisibleItem: Boolean) {
                     .padding(spacingSmall)
                     .fillMaxHeight()
             ) {
-                Text(genericInfo.title, style = primaryTextStyle)
+                Text(
+                    genericInfo.title,
+                    style = primaryTextStyle.copy(
+                        color = Color.White,
+                    ),
+                    maxLines = 1,
+                    overflow = TextOverflow.Clip,
+                    modifier = Modifier.padding(bottom = spacing),
+                )
                 Text(
                     genericInfo.description,
                     style = labelSmallTextStyle.copy(

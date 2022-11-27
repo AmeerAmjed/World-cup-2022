@@ -10,7 +10,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import com.example.worldcup2022.R
 import com.example.worldcup2022.ui.theme.LightColorScheme
 import com.example.worldcup2022.ui.theme.labelSmallTextStyle
@@ -23,7 +22,8 @@ fun TitleWithSeeAll(title: Int, seeAll: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = spacingSmall).padding(top = spacingMedium),
+            .padding(vertical = spacingSmall, horizontal = spacingMedium)
+            .padding(top = spacingMedium),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
