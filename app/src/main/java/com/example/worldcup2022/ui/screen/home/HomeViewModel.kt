@@ -61,12 +61,12 @@ class HomeViewModel : ViewModel() {
                         secondTeamFlagImageUrl = "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/255px-Flag_of_Japan.svg.png"
                     ),
                     MatchInfoUiState(
-                        date = "4:00",
+                        date = "End",
                         firstTeamName = "Belgium",
                         firstTeamGoals = "0",
                         firstTeamFlagImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/255px-Flag_of_Belgium_%28civil%29.svg.png",
                         secondTeamName = "Morocco",
-                        secondTeamGoals = "0",
+                        secondTeamGoals = "2",
                         secondTeamFlagImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/255px-Flag_of_Morocco.svg.png"
                     ),
                     MatchInfoUiState(
@@ -87,7 +87,6 @@ class HomeViewModel : ViewModel() {
                         secondTeamGoals = "0",
                         secondTeamFlagImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/800px-Flag_of_Germany.svg.png?20070926182838"
                     )
-
 
                 )
             )
