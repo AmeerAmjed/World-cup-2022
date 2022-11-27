@@ -18,6 +18,7 @@ val spacingHuge: Dp = 48.dp
 val fontSizePrimary: TextUnit = 16.sp
 val fontSizesSecondary: TextUnit = 20.sp
 val fontSizesThird: TextUnit = 22.sp
+val fontSizesSmall: TextUnit = 10.sp
 val fontSizesCaption: TextUnit = 12.sp
 val fontSizesTitle: TextUnit = 24.sp
 val fontSizesTitleExtra: TextUnit = 32.sp
@@ -26,3 +27,5 @@ val avatarSmall: Dp = 50.dp
 
 val iconSmall: Dp = 24.dp
 val iconMedium: Dp = 32.dp
+
+val cardRounded: Dp = 25.dp
